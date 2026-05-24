@@ -1,0 +1,15 @@
+{
+  "name": "DiVo",
+  "short_name": "DiVo",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#00e5ff",
+  "theme_color": "#00e5ff",
+  "icons": [
+    {
+      "src": "https://dummyimage.com/180x180/00e5ff/000000&text=DiVo",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
