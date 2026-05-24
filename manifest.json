@@ -7,7 +7,7 @@
   "theme_color": "#00e5ff",
   "icons": [
     {
-      "src": "https://dummyimage.com/180x180/00e5ff/000000&text=DiVo",
+      "src": "https://placehold.co/512x512/00e5ff/000000/png?text=DiVo&font=montserrat-bold",
       "sizes": "180x180",
       "type": "image/png"
     }
