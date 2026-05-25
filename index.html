@@ -331,13 +331,35 @@ select:focus{
 .actionButtons button{
     width:100%;
     min-height:64px;
-    font-size:18px;
-    background:#171d26;
-    border:1px solid #222b38;
-    color:#00ffff;
-}
 
-/* Кнопки Надіслати (3) та Готово (4) робимо великими на всю картку */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    font-size:17px;
+    font-weight:700;
+    letter-spacing:.3px;
+
+    background:linear-gradient(
+        180deg,
+        #1b2330,
+        #121821
+    );
+
+    border:1px solid rgba(0,255,255,.15);
+
+    color:#00ffff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        0 6px 14px rgba(0,0,0,.35);
+
+    transition:
+        transform .12s ease,
+        box-shadow .2s ease;
+}
+    /* Кнопки Надіслати (3) та Готово (4) робимо великими на всю картку */
 .actionButtons button:nth-child(3),
 .actionButtons button:nth-child(4){
     grid-column: span 2;
@@ -389,6 +411,12 @@ h3{
     width:18px;
     height:18px;
     stroke-width:2.5;
+}
+
+.actionButtons svg{
+    width:20px;
+    height:20px;
+    stroke-width:2.3;
 }
     
 </style>
@@ -474,21 +502,25 @@ class="fullBtn">
 <div class="actionButtons">
 
 <button onclick="downloadBackup()">
-⬇️ Зберегти
+<i data-lucide="download"></i>
+<span>Зберегти</span>
 </button>
 
 <button onclick="document.getElementById('backupInput').click()">
-⬆️ Відновити
+<i data-lucide="upload"></i>
+<span>Відновити</span>
 </button>
 
 <button onclick="sendCurrentSupplier()">
-📲 Надіслати
+<i data-lucide="send"></i>
+<span>Надіслати</span>
 </button>
 
 <button onclick="clearCategory()">
-✓ Готово
+<i data-lucide="check"></i>
+<span>Готово</span>
 </button>
-
+    
 </div>
 
 <input
