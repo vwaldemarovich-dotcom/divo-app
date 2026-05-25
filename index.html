@@ -549,13 +549,7 @@ onclick="saveEdit()">
 
 <script>
 
-if ('caches' in window) {
-    caches.keys().then(function(names) {
-        for (let name of names) {
-            caches.delete(name);
-        }
-    });
-}
+
 
 if('serviceWorker' in navigator){
     window.addEventListener('load',()=>{
