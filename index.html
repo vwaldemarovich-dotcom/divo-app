@@ -1118,11 +1118,11 @@ grouped[p.cat]=[];
 }
 
 grouped[p.cat].push(
-`${p.name} — ${p.qty} ${p.unit}${
-p.comment ? ' | ' + p.comment : ''
+`• ${p.name} — ${p.qty} ${p.unit}${
+p.comment ? '\n   ' + p.comment : ''
 }`
 );
-
+    
 });
 
 let text =
