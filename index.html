@@ -169,9 +169,19 @@ button:active{
 .fullBtn{
     width:100%;
     min-height:62px;
-    font-size:18px;
-}
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    font-size:18px;
+    font-weight:800;
+
+    text-align:center;
+}
+    
 .qty{
     min-width:24px;
     text-align:center;
@@ -305,10 +315,19 @@ select:focus{
 .editButtons button{
     width:100%;
     min-height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
     font-size:16px;
     font-weight:700;
-}
 
+    text-align:center;
+}
+    
 .saveBtn{
     background:#00ffff;
     color:#111;
@@ -418,7 +437,13 @@ h3{
     height:20px;
     stroke-width:2.3;
 }
-    
+
+.fullBtn span,
+.editButtons button span,
+.actionButtons button span{
+    line-height:1;
+}
+
 </style>
 </head>
 
