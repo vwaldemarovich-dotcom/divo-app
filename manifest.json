@@ -7,7 +7,7 @@
   "theme_color": "#00e5ff",
   "icons": [
     {
-      "src": "./divo-icon.jpg"
+      "src": "./divo-icon.jpg",
       "sizes": "180x180",
       "type": "image/jpeg"
     }
