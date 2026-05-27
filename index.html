@@ -458,7 +458,7 @@ h3{
 .cornerLogo{
     position:absolute;
     top:40%;
-    left:12px;
+    left:10px;
     transform:translateY(-50%);
     width:60px;
     height:60px;
@@ -736,19 +736,31 @@ const name =
 document.getElementById('name').value.trim();
 
 const cat =
-document.getElementById('cat').value.trim();
-
+document.getElementById('cat')
+.value
+.trim()
+.toLowerCase();
+    
 if(!name || !cat) return;
 
 products.push({
 
 name:name,
 
-qty:Math.max(
-1,
-Number(document.getElementById('qty').value)
-),
+qty:(()=>{
 
+const qty = parseInt(
+document.getElementById('qty').value
+);
+
+if(isNaN(qty) || qty < 1){
+    return 1;
+}
+
+return qty;
+
+})(),
+    
 unit:document.getElementById('unit').value,
 
 cat:cat,
@@ -963,9 +975,16 @@ try{
 const data =
 JSON.parse(e.target.result);
 
-products =
-data.products || [];
+if(!Array.isArray(data.products)){
 
+alert('Помилка backup');
+
+return;
+
+}
+
+products = data.products;
+    
 suppliers =
 data.suppliers || {};
 
