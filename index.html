@@ -508,8 +508,14 @@ oninput="saveMainTitle()"
 <option value="пак">пак</option>
 </select>
 
-<input id="cat" placeholder="Категорія">
+<input
+id="cat"
+placeholder="Категорія"
+list="categories"
+>
 
+<datalist id="categories"></datalist>
+    
 </div>
 
 <input id="comment" placeholder="Коментар">
@@ -1042,6 +1048,22 @@ grouped[p.cat].push({p,i});
 
 const categories =
 Object.keys(grouped);
+
+const datalist =
+document.getElementById('categories');
+
+datalist.innerHTML = '';
+
+categories.forEach(cat=>{
+
+const option =
+document.createElement('option');
+
+option.value = cat;
+
+datalist.appendChild(option);
+
+});
 
 if(!currentCategory && categories.length){
 
